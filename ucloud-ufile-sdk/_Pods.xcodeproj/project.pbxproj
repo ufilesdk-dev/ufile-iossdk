@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0979F799091E78228A77C40E39D11684 /* UFileAPIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C7A99D7694030E0FE51CE761124C254 /* UFileAPIUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E487DBE9798285090E07869605F6372 /* UFileHttpManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C4B3B9B634AB13A1C94673E0733B2B4 /* UFileHttpManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1A2D6ED92CAD6DD717D17E6DF3B16169 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		21849A58A4033F8ECC4478268FE96E2C /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9878AA7BC2866C198ED2864D3AF0FE6A /* version.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6F2F47B9865FC105147AD79DE4798FCF /* UFileHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA5B2EFF8F923D464819CF3D741C923 /* UFileHttpManager.m */; };
+		809643888725882F6EBE96CCFD19A27B /* Pods-ucloud-ufile-sdk_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA6906981AFDC8D6FC256DB44BCF3E /* Pods-ucloud-ufile-sdk_Example-dummy.m */; };
+		82FCD37DE1201917CD43E1C564B0AAE8 /* ucloud-ufile-sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EC850CB8332261F26BA3A55067F48EA /* ucloud-ufile-sdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84924729FA50BE46CD9FDB39D321102D /* ucloud-ufile-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7299A8D8E3C621ED453756A5D1FFCA96 /* ucloud-ufile-sdk-dummy.m */; };
+		9BAD051B85CF7E77E922051BCFDAC740 /* UFileAPIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30AE0FA0257CFC7AA70CD2DE3CF40C /* UFileAPIUtils.m */; };
+		AD7A873B44372C65FF3EB413FEEB2A4C /* UFileAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2675E4CCDFC42E1FF6BE242D5B08440F /* UFileAPI.m */; };
+		BD8EE28F39046BE3FBEA3460A309F86D /* Pods-ucloud-ufile-sdk_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 830664BFED5E86FA850124A6FCCB4BE5 /* Pods-ucloud-ufile-sdk_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE57714852E54DDC3359188B2C997DC6 /* Pods-ucloud-ufile-sdk_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF12190C2CF3C0F4D2DCE178C426F4F /* Pods-ucloud-ufile-sdk_Tests-dummy.m */; };
+		BF0622B438B13786B67B2E6597CD7235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		D18CABBEFA2BFD23837F4754A7241E5C /* UFileAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C097BF6065D00B306F97E8F27C7F9D0 /* UFileAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F05E6469CAB24130CA26618A7BF2D3D9 /* Pods-ucloud-ufile-sdk_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C85CBD4258521A4844ED7F77D0BC35 /* Pods-ucloud-ufile-sdk_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB5B7655134E489B273C46C2EFDA892E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0FAE407DA3ABE9F4C87826A659ACD2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0770D5863D307B1B7054671B068FB336;
+			remoteInfo = "ucloud-ufile-sdk";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		023B612FB5FD7D080D78BA04ED8CBDE8 /* Pods-ucloud-ufile-sdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ucloud-ufile-sdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		08CB66B282948C239ED9A80C1277B607 /* Pods-ucloud-ufile-sdk_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ucloud-ufile-sdk_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		09C85CBD4258521A4844ED7F77D0BC35 /* Pods-ucloud-ufile-sdk_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ucloud-ufile-sdk_Example-umbrella.h"; sourceTree = "<group>"; };
+		0B1D96AA6D6D868957A7946449F4B61E /* Pods-ucloud-ufile-sdk_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ucloud-ufile-sdk_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2675E4CCDFC42E1FF6BE242D5B08440F /* UFileAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UFileAPI.m; sourceTree = "<group>"; };
+		2B53AB32A029084FC93B81E4863FBB96 /* ucloud-ufile-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ucloud-ufile-sdk-prefix.pch"; sourceTree = "<group>"; };
+		2D16A3DCF0A5CFD5765A723AE10D8E6E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C097BF6065D00B306F97E8F27C7F9D0 /* UFileAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UFileAPI.h; sourceTree = "<group>"; };
+		3E30AE0FA0257CFC7AA70CD2DE3CF40C /* UFileAPIUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UFileAPIUtils.m; sourceTree = "<group>"; };
+		41C7DA1181318B2DE97EC95583C05B2D /* Pods-ucloud-ufile-sdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ucloud-ufile-sdk_Example.release.xcconfig"; sourceTree = "<group>"; };
+		47CD0C9505D39AD741417ACE66CA9B08 /* Pods-ucloud-ufile-sdk_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ucloud-ufile-sdk_Example-resources.sh"; sourceTree = "<group>"; };
+		4C7A99D7694030E0FE51CE761124C254 /* UFileAPIUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UFileAPIUtils.h; sourceTree = "<group>"; };
+		54025A116A6248426DFB405BCD5CC8C2 /* Pods-ucloud-ufile-sdk_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ucloud-ufile-sdk_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C4B3B9B634AB13A1C94673E0733B2B4 /* UFileHttpManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UFileHttpManager.h; sourceTree = "<group>"; };
+		5FEA6906981AFDC8D6FC256DB44BCF3E /* Pods-ucloud-ufile-sdk_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ucloud-ufile-sdk_Example-dummy.m"; sourceTree = "<group>"; };
+		65117E4AE7849E28E133AE473C5D3B91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CA81CE62F3DA06C0DACD13FF9E9E175 /* Pods-ucloud-ufile-sdk_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ucloud-ufile-sdk_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6DF12190C2CF3C0F4D2DCE178C426F4F /* Pods-ucloud-ufile-sdk_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ucloud-ufile-sdk_Tests-dummy.m"; sourceTree = "<group>"; };
+		728FE5E55CE6E70FC234BA45D78097AB /* Pods-ucloud-ufile-sdk_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ucloud-ufile-sdk_Tests.modulemap"; sourceTree = "<group>"; };
+		7299A8D8E3C621ED453756A5D1FFCA96 /* ucloud-ufile-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ucloud-ufile-sdk-dummy.m"; sourceTree = "<group>"; };
+		82F1C2C2B3CBDAEEF0C7AE6DAE21483F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		830664BFED5E86FA850124A6FCCB4BE5 /* Pods-ucloud-ufile-sdk_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ucloud-ufile-sdk_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8945314BA048771E0BEE9406F02D5E14 /* ucloud-ufile-sdk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ucloud-ufile-sdk.xcconfig"; sourceTree = "<group>"; };
+		8CA2E761561FA32242C61664C2079269 /* Pods-ucloud-ufile-sdk_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ucloud-ufile-sdk_Tests-resources.sh"; sourceTree = "<group>"; };
+		8EC850CB8332261F26BA3A55067F48EA /* ucloud-ufile-sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ucloud-ufile-sdk-umbrella.h"; sourceTree = "<group>"; };
+		8EF40E37D4C67E147B681EAE246E1D8B /* ucloud-ufile-sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "ucloud-ufile-sdk.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9878AA7BC2866C198ED2864D3AF0FE6A /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		9D85686D61D88A6BFE3A870ED3B3762F /* Pods_ucloud_ufile_sdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ucloud_ufile_sdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7746FFD58080C4A5250BB3058450C7A /* Pods-ucloud-ufile-sdk_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ucloud-ufile-sdk_Example-frameworks.sh"; sourceTree = "<group>"; };
+		C2771ACAABA95411968922D605A38B63 /* Pods-ucloud-ufile-sdk_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ucloud-ufile-sdk_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		C292DE96E2699EF1C829B01B419DE617 /* ucloud_ufile_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ucloud_ufile_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D48CDF99FD67E9C69333222C052A3756 /* Pods-ucloud-ufile-sdk_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ucloud-ufile-sdk_Example.modulemap"; sourceTree = "<group>"; };
+		DBA5B2EFF8F923D464819CF3D741C923 /* UFileHttpManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UFileHttpManager.m; sourceTree = "<group>"; };
+		E18EAC83F8D07D71D9FB3E4749D9A51B /* Pods_ucloud_ufile_sdk_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ucloud_ufile_sdk_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47C4D171D0F1EB24BE48546413ADF37 /* Pods-ucloud-ufile-sdk_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ucloud-ufile-sdk_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FF2C8D33D595CA401D38220C9473FDBE /* Pods-ucloud-ufile-sdk_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ucloud-ufile-sdk_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0493E13156CAF0D923D4BA9792037603 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2D6ED92CAD6DD717D17E6DF3B16169 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D91D3B6CDDC608F0452D1F8DBBF2560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB5B7655134E489B273C46C2EFDA892E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576419477C5797185607E8C28E68033F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0622B438B13786B67B2E6597CD7235 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2204E910EEE357671ED138F4CDEE83B9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3C097BF6065D00B306F97E8F27C7F9D0 /* UFileAPI.h */,
+				2675E4CCDFC42E1FF6BE242D5B08440F /* UFileAPI.m */,
+				4C7A99D7694030E0FE51CE761124C254 /* UFileAPIUtils.h */,
+				3E30AE0FA0257CFC7AA70CD2DE3CF40C /* UFileAPIUtils.m */,
+				5C4B3B9B634AB13A1C94673E0733B2B4 /* UFileHttpManager.h */,
+				DBA5B2EFF8F923D464819CF3D741C923 /* UFileHttpManager.m */,
+				9878AA7BC2866C198ED2864D3AF0FE6A /* version.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4C3EB91E45A1E273E46C1FFF4CF60FC4 /* ucloud-ufile-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				2204E910EEE357671ED138F4CDEE83B9 /* Classes */,
+			);
+			path = "ucloud-ufile-sdk";
+			sourceTree = "<group>";
+		};
+		561BCAB4C72D7AE22CCC9E11516F2F56 /* Pods-ucloud-ufile-sdk_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2D16A3DCF0A5CFD5765A723AE10D8E6E /* Info.plist */,
+				728FE5E55CE6E70FC234BA45D78097AB /* Pods-ucloud-ufile-sdk_Tests.modulemap */,
+				FF2C8D33D595CA401D38220C9473FDBE /* Pods-ucloud-ufile-sdk_Tests-acknowledgements.markdown */,
+				6CA81CE62F3DA06C0DACD13FF9E9E175 /* Pods-ucloud-ufile-sdk_Tests-acknowledgements.plist */,
+				6DF12190C2CF3C0F4D2DCE178C426F4F /* Pods-ucloud-ufile-sdk_Tests-dummy.m */,
+				C2771ACAABA95411968922D605A38B63 /* Pods-ucloud-ufile-sdk_Tests-frameworks.sh */,
+				8CA2E761561FA32242C61664C2079269 /* Pods-ucloud-ufile-sdk_Tests-resources.sh */,
+				830664BFED5E86FA850124A6FCCB4BE5 /* Pods-ucloud-ufile-sdk_Tests-umbrella.h */,
+				54025A116A6248426DFB405BCD5CC8C2 /* Pods-ucloud-ufile-sdk_Tests.debug.xcconfig */,
+				0B1D96AA6D6D868957A7946449F4B61E /* Pods-ucloud-ufile-sdk_Tests.release.xcconfig */,
+			);
+			name = "Pods-ucloud-ufile-sdk_Tests";
+			path = "Target Support Files/Pods-ucloud-ufile-sdk_Tests";
+			sourceTree = "<group>";
+		};
+		5A93D6E1C2E38D9C54E4606824024279 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D85686D61D88A6BFE3A870ED3B3762F /* Pods_ucloud_ufile_sdk_Example.framework */,
+				E18EAC83F8D07D71D9FB3E4749D9A51B /* Pods_ucloud_ufile_sdk_Tests.framework */,
+				C292DE96E2699EF1C829B01B419DE617 /* ucloud_ufile_sdk.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FB0A4915E9F6E1231E401AFB41813CD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				82F1C2C2B3CBDAEEF0C7AE6DAE21483F /* Info.plist */,
+				8EF40E37D4C67E147B681EAE246E1D8B /* ucloud-ufile-sdk.modulemap */,
+				8945314BA048771E0BEE9406F02D5E14 /* ucloud-ufile-sdk.xcconfig */,
+				7299A8D8E3C621ED453756A5D1FFCA96 /* ucloud-ufile-sdk-dummy.m */,
+				2B53AB32A029084FC93B81E4863FBB96 /* ucloud-ufile-sdk-prefix.pch */,
+				8EC850CB8332261F26BA3A55067F48EA /* ucloud-ufile-sdk-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ucloud-ufile-sdk";
+			sourceTree = "<group>";
+		};
+		7D7E789FC205A0E8EEA998E5D77A0610 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				93944E8807993532B49F5F74663319C9 /* Pods-ucloud-ufile-sdk_Example */,
+				561BCAB4C72D7AE22CCC9E11516F2F56 /* Pods-ucloud-ufile-sdk_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				B43C407E92C7E4A956421FC3C679F3D0 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				5A93D6E1C2E38D9C54E4606824024279 /* Products */,
+				7D7E789FC205A0E8EEA998E5D77A0610 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		93944E8807993532B49F5F74663319C9 /* Pods-ucloud-ufile-sdk_Example */ = {
+			isa = PBXGroup;
+			children = (
+				65117E4AE7849E28E133AE473C5D3B91 /* Info.plist */,
+				D48CDF99FD67E9C69333222C052A3756 /* Pods-ucloud-ufile-sdk_Example.modulemap */,
+				F47C4D171D0F1EB24BE48546413ADF37 /* Pods-ucloud-ufile-sdk_Example-acknowledgements.markdown */,
+				08CB66B282948C239ED9A80C1277B607 /* Pods-ucloud-ufile-sdk_Example-acknowledgements.plist */,
+				5FEA6906981AFDC8D6FC256DB44BCF3E /* Pods-ucloud-ufile-sdk_Example-dummy.m */,
+				B7746FFD58080C4A5250BB3058450C7A /* Pods-ucloud-ufile-sdk_Example-frameworks.sh */,
+				47CD0C9505D39AD741417ACE66CA9B08 /* Pods-ucloud-ufile-sdk_Example-resources.sh */,
+				09C85CBD4258521A4844ED7F77D0BC35 /* Pods-ucloud-ufile-sdk_Example-umbrella.h */,
+				023B612FB5FD7D080D78BA04ED8CBDE8 /* Pods-ucloud-ufile-sdk_Example.debug.xcconfig */,
+				41C7DA1181318B2DE97EC95583C05B2D /* Pods-ucloud-ufile-sdk_Example.release.xcconfig */,
+			);
+			name = "Pods-ucloud-ufile-sdk_Example";
+			path = "Target Support Files/Pods-ucloud-ufile-sdk_Example";
+			sourceTree = "<group>";
+		};
+		B43C407E92C7E4A956421FC3C679F3D0 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C356523187DBE18AB9E78809D1F3FD6E /* ucloud-ufile-sdk */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C356523187DBE18AB9E78809D1F3FD6E /* ucloud-ufile-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				6FB0A4915E9F6E1231E401AFB41813CD /* Support Files */,
+				4C3EB91E45A1E273E46C1FFF4CF60FC4 /* ucloud-ufile-sdk */,
+			);
+			name = "ucloud-ufile-sdk";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		43AF7C5A4DC347BFEB03F89F159392DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD8EE28F39046BE3FBEA3460A309F86D /* Pods-ucloud-ufile-sdk_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ADFA4306ADE9F5A3B9B2AA2561B0D6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F05E6469CAB24130CA26618A7BF2D3D9 /* Pods-ucloud-ufile-sdk_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D265CE13B6771779E8ED3745F9FB7FA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82FCD37DE1201917CD43E1C564B0AAE8 /* ucloud-ufile-sdk-umbrella.h in Headers */,
+				D18CABBEFA2BFD23837F4754A7241E5C /* UFileAPI.h in Headers */,
+				0979F799091E78228A77C40E39D11684 /* UFileAPIUtils.h in Headers */,
+				0E487DBE9798285090E07869605F6372 /* UFileHttpManager.h in Headers */,
+				21849A58A4033F8ECC4478268FE96E2C /* version.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0770D5863D307B1B7054671B068FB336 /* ucloud-ufile-sdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5481EED5F8650D976B02BBE2FB86885 /* Build configuration list for PBXNativeTarget "ucloud-ufile-sdk" */;
+			buildPhases = (
+				6FBF74EF942E1284ADF91DBEECB576EC /* Sources */,
+				0D91D3B6CDDC608F0452D1F8DBBF2560 /* Frameworks */,
+				D265CE13B6771779E8ED3745F9FB7FA0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ucloud-ufile-sdk";
+			productName = "ucloud-ufile-sdk";
+			productReference = C292DE96E2699EF1C829B01B419DE617 /* ucloud_ufile_sdk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2ABFBFA29A5DB84B7885BAB3964A988F /* Pods-ucloud-ufile-sdk_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D5C1DDAAD06CB36474047D7E09E72DB /* Build configuration list for PBXNativeTarget "Pods-ucloud-ufile-sdk_Tests" */;
+			buildPhases = (
+				BADE31E4DFB86BFECC6ACB27E560EAC2 /* Sources */,
+				0493E13156CAF0D923D4BA9792037603 /* Frameworks */,
+				43AF7C5A4DC347BFEB03F89F159392DF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ucloud-ufile-sdk_Tests";
+			productName = "Pods-ucloud-ufile-sdk_Tests";
+			productReference = E18EAC83F8D07D71D9FB3E4749D9A51B /* Pods_ucloud_ufile_sdk_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		95E2C2921993F4414AB37C3DF041AF2E /* Pods-ucloud-ufile-sdk_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2FDAD9D353273F71C456B46D84AD4AC /* Build configuration list for PBXNativeTarget "Pods-ucloud-ufile-sdk_Example" */;
+			buildPhases = (
+				C9597E0A9E2D5A33BE7587170EABB990 /* Sources */,
+				576419477C5797185607E8C28E68033F /* Frameworks */,
+				8ADFA4306ADE9F5A3B9B2AA2561B0D6D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				641C4322D82FA5B121A080C873E677A1 /* PBXTargetDependency */,
+			);
+			name = "Pods-ucloud-ufile-sdk_Example";
+			productName = "Pods-ucloud-ufile-sdk_Example";
+			productReference = 9D85686D61D88A6BFE3A870ED3B3762F /* Pods_ucloud_ufile_sdk_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5A93D6E1C2E38D9C54E4606824024279 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95E2C2921993F4414AB37C3DF041AF2E /* Pods-ucloud-ufile-sdk_Example */,
+				2ABFBFA29A5DB84B7885BAB3964A988F /* Pods-ucloud-ufile-sdk_Tests */,
+				0770D5863D307B1B7054671B068FB336 /* ucloud-ufile-sdk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FBF74EF942E1284ADF91DBEECB576EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84924729FA50BE46CD9FDB39D321102D /* ucloud-ufile-sdk-dummy.m in Sources */,
+				AD7A873B44372C65FF3EB413FEEB2A4C /* UFileAPI.m in Sources */,
+				9BAD051B85CF7E77E922051BCFDAC740 /* UFileAPIUtils.m in Sources */,
+				6F2F47B9865FC105147AD79DE4798FCF /* UFileHttpManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADE31E4DFB86BFECC6ACB27E560EAC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE57714852E54DDC3359188B2C997DC6 /* Pods-ucloud-ufile-sdk_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9597E0A9E2D5A33BE7587170EABB990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				809643888725882F6EBE96CCFD19A27B /* Pods-ucloud-ufile-sdk_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		641C4322D82FA5B121A080C873E677A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ucloud-ufile-sdk";
+			target = 0770D5863D307B1B7054671B068FB336 /* ucloud-ufile-sdk */;
+			targetProxy = E0FAE407DA3ABE9F4C87826A659ACD2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		194E50FAEB6CB743D640C6B210F3F2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B1D96AA6D6D868957A7946449F4B61E /* Pods-ucloud-ufile-sdk_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ucloud-ufile-sdk_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ucloud-ufile-sdk_Tests/Pods-ucloud-ufile-sdk_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ucloud_ufile_sdk_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2B3EE5212B290DCB4F7455007CEC2C39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 023B612FB5FD7D080D78BA04ED8CBDE8 /* Pods-ucloud-ufile-sdk_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ucloud-ufile-sdk_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ucloud-ufile-sdk_Example/Pods-ucloud-ufile-sdk_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ucloud_ufile_sdk_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		473D329C5A6963E7E6D934A653928393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8945314BA048771E0BEE9406F02D5E14 /* ucloud-ufile-sdk.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ucloud-ufile-sdk/ucloud-ufile-sdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ucloud-ufile-sdk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ucloud-ufile-sdk/ucloud-ufile-sdk.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ucloud_ufile_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		51B0786D2A79E5E01A0438DB65C63C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54025A116A6248426DFB405BCD5CC8C2 /* Pods-ucloud-ufile-sdk_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ucloud-ufile-sdk_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ucloud-ufile-sdk_Tests/Pods-ucloud-ufile-sdk_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ucloud_ufile_sdk_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9161711FE6B6B46D6E47C19207CFD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8945314BA048771E0BEE9406F02D5E14 /* ucloud-ufile-sdk.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ucloud-ufile-sdk/ucloud-ufile-sdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ucloud-ufile-sdk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ucloud-ufile-sdk/ucloud-ufile-sdk.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ucloud_ufile_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FF85FAE7B614DB2EF301B7DC0260656E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C7DA1181318B2DE97EC95583C05B2D /* Pods-ucloud-ufile-sdk_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ucloud-ufile-sdk_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ucloud-ufile-sdk_Example/Pods-ucloud-ufile-sdk_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ucloud_ufile_sdk_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D5C1DDAAD06CB36474047D7E09E72DB /* Build configuration list for PBXNativeTarget "Pods-ucloud-ufile-sdk_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51B0786D2A79E5E01A0438DB65C63C6F /* Debug */,
+				194E50FAEB6CB743D640C6B210F3F2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5481EED5F8650D976B02BBE2FB86885 /* Build configuration list for PBXNativeTarget "ucloud-ufile-sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				473D329C5A6963E7E6D934A653928393 /* Debug */,
+				B9161711FE6B6B46D6E47C19207CFD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2FDAD9D353273F71C456B46D84AD4AC /* Build configuration list for PBXNativeTarget "Pods-ucloud-ufile-sdk_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B3EE5212B290DCB4F7455007CEC2C39 /* Debug */,
+				FF85FAE7B614DB2EF301B7DC0260656E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

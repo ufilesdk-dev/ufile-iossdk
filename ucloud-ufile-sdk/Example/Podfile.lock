@@ -1,0 +1,16 @@
+PODS:
+  - ucloud-ufile-sdk (1.0.3)
+
+DEPENDENCIES:
+  - ucloud-ufile-sdk (from `../`)
+
+EXTERNAL SOURCES:
+  ucloud-ufile-sdk:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ucloud-ufile-sdk: 2430fbc1646e13e409040dfded535f85cc5be9f8
+
+PODFILE CHECKSUM: 5cf71a77c10f365299e136be6033c78ae0c21626
+
+COCOAPODS: 1.2.0

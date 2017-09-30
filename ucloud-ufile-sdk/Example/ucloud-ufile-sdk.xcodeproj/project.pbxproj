@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		B20880851E9782080025DD85 /* Pods_ucloud_ufile_sdk_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD865929D80843D1056A5256 /* Pods_ucloud_ufile_sdk_Example.framework */; };
+		B77E34DAE868610E88F7993E /* Pods_ucloud_ufile_sdk_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE4FC3B950872CD91838FA3 /* Pods_ucloud_ufile_sdk_Tests.framework */; };
+		F5BD861F1D0BAFB80036DF80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD860B1D0BAFB80036DF80 /* AppDelegate.swift */; };
+		F5BD86201D0BAFB80036DF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BD860C1D0BAFB80036DF80 /* Assets.xcassets */; };
+		F5BD86231D0BAFB80036DF80 /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD86121D0BAFB80036DF80 /* DeleteViewController.swift */; };
+		F5BD86241D0BAFB80036DF80 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD86131D0BAFB80036DF80 /* DownloadViewController.swift */; };
+		F5BD86251D0BAFB80036DF80 /* HeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD86141D0BAFB80036DF80 /* HeadViewController.swift */; };
+		F5BD86261D0BAFB80036DF80 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5BD86151D0BAFB80036DF80 /* Info.plist */; };
+		F5BD86271D0BAFB80036DF80 /* MultipartSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD86161D0BAFB80036DF80 /* MultipartSession.swift */; };
+		F5BD86281D0BAFB80036DF80 /* MultipartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD86171D0BAFB80036DF80 /* MultipartTableCell.swift */; };
+		F5BD86291D0BAFB80036DF80 /* MultipartTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD86181D0BAFB80036DF80 /* MultipartTableController.swift */; };
+		F5BD862A1D0BAFB80036DF80 /* MultipartUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD86191D0BAFB80036DF80 /* MultipartUploadViewController.swift */; };
+		F5BD862C1D0BAFB80036DF80 /* UFileSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD861C1D0BAFB80036DF80 /* UFileSDK.swift */; };
+		F5BD862D1D0BAFB80036DF80 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD861D1D0BAFB80036DF80 /* UploadViewController.swift */; };
+		F5BD862E1D0BAFB80036DF80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BD861E1D0BAFB80036DF80 /* ViewController.swift */; };
+		F5BD86361D0BB8710036DF80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BD860E1D0BAFB80036DF80 /* LaunchScreen.storyboard */; };
+		F5BD86371D0BB8710036DF80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5BD86101D0BAFB80036DF80 /* Main.storyboard */; };
+		F5BD86391D0BB9A60036DF80 /* initscreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5BD86381D0BB9A60036DF80 /* initscreen.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = "ucloud-ufile-sdk";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07305B89EF6EDD48599FAAC8 /* Pods-ucloud-ufile-sdk_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ucloud-ufile-sdk_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ucloud-ufile-sdk_Tests/Pods-ucloud-ufile-sdk_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* ucloud-ufile-sdk_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ucloud-ufile-sdk_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F5AE195388D20070C39A /* ucloud-ufile-sdk_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ucloud-ufile-sdk_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		628CF2D7E481BDC5CB4C1FE4 /* Pods-ucloud-ufile-sdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ucloud-ufile-sdk_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ucloud-ufile-sdk_Example/Pods-ucloud-ufile-sdk_Example.release.xcconfig"; sourceTree = "<group>"; };
+		77707042805F30DE23588654 /* ucloud-ufile-sdk.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ucloud-ufile-sdk.podspec"; path = "../ucloud-ufile-sdk.podspec"; sourceTree = "<group>"; };
+		8AE4FC3B950872CD91838FA3 /* Pods_ucloud_ufile_sdk_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ucloud_ufile_sdk_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9086CAA679ADAE57D0CC6ED4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C7F2C490BBDF344BF45D26F7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		DD865929D80843D1056A5256 /* Pods_ucloud_ufile_sdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ucloud_ufile_sdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92C928F2939846926263854 /* Pods-ucloud-ufile-sdk_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ucloud-ufile-sdk_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ucloud-ufile-sdk_Tests/Pods-ucloud-ufile-sdk_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E948D84D1E9740C2000650A7 /* ucloud_ufile_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ucloud_ufile_sdk.framework; path = "../../../../Library/Developer/Xcode/DerivedData/ucloud-ufile-sdk-coassxfbvmgaarfgxwhyzuboktsl/Build/Products/Debug-iphoneos/ucloud-ufile-sdk/ucloud_ufile_sdk.framework"; sourceTree = "<group>"; };
+		F5BD860A1D0BAFB70036DF80 /* ucloud-ufile-sdk_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ucloud-ufile-sdk_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		F5BD860B1D0BAFB80036DF80 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5BD860C1D0BAFB80036DF80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5BD860F1D0BAFB80036DF80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5BD86111D0BAFB80036DF80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		F5BD86121D0BAFB80036DF80 /* DeleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
+		F5BD86131D0BAFB80036DF80 /* DownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		F5BD86141D0BAFB80036DF80 /* HeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadViewController.swift; sourceTree = "<group>"; };
+		F5BD86151D0BAFB80036DF80 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5BD86161D0BAFB80036DF80 /* MultipartSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartSession.swift; sourceTree = "<group>"; };
+		F5BD86171D0BAFB80036DF80 /* MultipartTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartTableCell.swift; sourceTree = "<group>"; };
+		F5BD86181D0BAFB80036DF80 /* MultipartTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartTableController.swift; sourceTree = "<group>"; };
+		F5BD86191D0BAFB80036DF80 /* MultipartUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartUploadViewController.swift; sourceTree = "<group>"; };
+		F5BD861A1D0BAFB80036DF80 /* ufile sdk demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ufile sdk demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		F5BD861C1D0BAFB80036DF80 /* UFileSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UFileSDK.swift; sourceTree = "<group>"; };
+		F5BD861D1D0BAFB80036DF80 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		F5BD861E1D0BAFB80036DF80 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5BD86381D0BB9A60036DF80 /* initscreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = initscreen.jpg; sourceTree = SOURCE_ROOT; };
+		FCD9FBD4E85DE31DE4C7994A /* Pods-ucloud-ufile-sdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ucloud-ufile-sdk_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ucloud-ufile-sdk_Example/Pods-ucloud-ufile-sdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				B20880851E9782080025DD85 /* Pods_ucloud_ufile_sdk_Example.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				B77E34DAE868610E88F7993E /* Pods_ucloud_ufile_sdk_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* Example for ucloud-ufile-sdk */,
+				6003F5B5195388D20070C39A /* Tests */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				7B18E6783997C9CEF15D5691 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* ucloud-ufile-sdk_Example.app */,
+				6003F5AE195388D20070C39A /* ucloud-ufile-sdk_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E948D84D1E9740C2000650A7 /* ucloud_ufile_sdk.framework */,
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				DD865929D80843D1056A5256 /* Pods_ucloud_ufile_sdk_Example.framework */,
+				8AE4FC3B950872CD91838FA3 /* Pods_ucloud_ufile_sdk_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* Example for ucloud-ufile-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				F5BD86381D0BB9A60036DF80 /* initscreen.jpg */,
+				F5BD860B1D0BAFB80036DF80 /* AppDelegate.swift */,
+				F5BD860C1D0BAFB80036DF80 /* Assets.xcassets */,
+				F5BD860D1D0BAFB80036DF80 /* Base.lproj */,
+				F5BD86121D0BAFB80036DF80 /* DeleteViewController.swift */,
+				F5BD86131D0BAFB80036DF80 /* DownloadViewController.swift */,
+				F5BD86141D0BAFB80036DF80 /* HeadViewController.swift */,
+				F5BD86151D0BAFB80036DF80 /* Info.plist */,
+				F5BD86161D0BAFB80036DF80 /* MultipartSession.swift */,
+				F5BD86171D0BAFB80036DF80 /* MultipartTableCell.swift */,
+				F5BD86181D0BAFB80036DF80 /* MultipartTableController.swift */,
+				F5BD86191D0BAFB80036DF80 /* MultipartUploadViewController.swift */,
+				F5BD861A1D0BAFB80036DF80 /* ufile sdk demo-Bridging-Header.h */,
+				F5BD861C1D0BAFB80036DF80 /* UFileSDK.swift */,
+				F5BD861D1D0BAFB80036DF80 /* UploadViewController.swift */,
+				F5BD861E1D0BAFB80036DF80 /* ViewController.swift */,
+				F5BD860A1D0BAFB70036DF80 /* ucloud-ufile-sdk_Example-Bridging-Header.h */,
+			);
+			name = "Example for ucloud-ufile-sdk";
+			path = "ucloud-ufile-sdk";
+			sourceTree = "<group>";
+		};
+		6003F5B5195388D20070C39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5BB195388D20070C39A /* Tests.m */,
+				6003F5B6195388D20070C39A /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6003F5B6195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B7195388D20070C39A /* Tests-Info.plist */,
+				6003F5B8195388D20070C39A /* InfoPlist.strings */,
+				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				77707042805F30DE23588654 /* ucloud-ufile-sdk.podspec */,
+				C7F2C490BBDF344BF45D26F7 /* README.md */,
+				9086CAA679ADAE57D0CC6ED4 /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		7B18E6783997C9CEF15D5691 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCD9FBD4E85DE31DE4C7994A /* Pods-ucloud-ufile-sdk_Example.debug.xcconfig */,
+				628CF2D7E481BDC5CB4C1FE4 /* Pods-ucloud-ufile-sdk_Example.release.xcconfig */,
+				E92C928F2939846926263854 /* Pods-ucloud-ufile-sdk_Tests.debug.xcconfig */,
+				07305B89EF6EDD48599FAAC8 /* Pods-ucloud-ufile-sdk_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5BD860D1D0BAFB80036DF80 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				F5BD860E1D0BAFB80036DF80 /* LaunchScreen.storyboard */,
+				F5BD86101D0BAFB80036DF80 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* ucloud-ufile-sdk_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ucloud-ufile-sdk_Example" */;
+			buildPhases = (
+				BBDDF1EB5CFCC12C3E9B0196 /* [CP] Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				6F6B84ECB23192E7044FFC5E /* [CP] Embed Pods Frameworks */,
+				57500C45FBD3CB88299C6786 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ucloud-ufile-sdk_Example";
+			productName = "ucloud-ufile-sdk";
+			productReference = 6003F58A195388D20070C39A /* ucloud-ufile-sdk_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* ucloud-ufile-sdk_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ucloud-ufile-sdk_Tests" */;
+			buildPhases = (
+				EB9584BD548F7872DAFC32CB /* [CP] Check Pods Manifest.lock */,
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+				7B7B849562D11654289A3851 /* [CP] Embed Pods Frameworks */,
+				B0CB5C2228A98512F390AF25 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = "ucloud-ufile-sdk_Tests";
+			productName = "ucloud-ufile-sdkTests";
+			productReference = 6003F5AE195388D20070C39A /* ucloud-ufile-sdk_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = UCloudUFile;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = shaukwu;
+				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = CFP9KY4MGC;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
+					};
+					6003F5AD195388D20070C39A = {
+						LastSwiftMigration = 0830;
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "ucloud-ufile-sdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* ucloud-ufile-sdk_Example */,
+				6003F5AD195388D20070C39A /* ucloud-ufile-sdk_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BD86361D0BB8710036DF80 /* LaunchScreen.storyboard in Resources */,
+				F5BD86371D0BB8710036DF80 /* Main.storyboard in Resources */,
+				F5BD86261D0BAFB80036DF80 /* Info.plist in Resources */,
+				F5BD86391D0BB9A60036DF80 /* initscreen.jpg in Resources */,
+				F5BD86201D0BAFB80036DF80 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57500C45FBD3CB88299C6786 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ucloud-ufile-sdk_Example/Pods-ucloud-ufile-sdk_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F6B84ECB23192E7044FFC5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ucloud-ufile-sdk_Example/Pods-ucloud-ufile-sdk_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B7B849562D11654289A3851 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ucloud-ufile-sdk_Tests/Pods-ucloud-ufile-sdk_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0CB5C2228A98512F390AF25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ucloud-ufile-sdk_Tests/Pods-ucloud-ufile-sdk_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBDDF1EB5CFCC12C3E9B0196 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB9584BD548F7872DAFC32CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BD862D1D0BAFB80036DF80 /* UploadViewController.swift in Sources */,
+				F5BD86251D0BAFB80036DF80 /* HeadViewController.swift in Sources */,
+				F5BD861F1D0BAFB80036DF80 /* AppDelegate.swift in Sources */,
+				F5BD86241D0BAFB80036DF80 /* DownloadViewController.swift in Sources */,
+				F5BD86271D0BAFB80036DF80 /* MultipartSession.swift in Sources */,
+				F5BD862E1D0BAFB80036DF80 /* ViewController.swift in Sources */,
+				F5BD862A1D0BAFB80036DF80 /* MultipartUploadViewController.swift in Sources */,
+				F5BD862C1D0BAFB80036DF80 /* UFileSDK.swift in Sources */,
+				F5BD86291D0BAFB80036DF80 /* MultipartTableController.swift in Sources */,
+				F5BD86231D0BAFB80036DF80 /* DeleteViewController.swift in Sources */,
+				F5BD86281D0BAFB80036DF80 /* MultipartTableCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* ucloud-ufile-sdk_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F5B9195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F5BD860E1D0BAFB80036DF80 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5BD860F1D0BAFB80036DF80 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F5BD86101D0BAFB80036DF80 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5BD86111D0BAFB80036DF80 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD9FBD4E85DE31DE4C7994A /* Pods-ucloud-ufile-sdk_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ucloud-ufile-sdk/ucloud-ufile-sdk-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/ucloud-ufile-sdk/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.ucloud.ucloud-ufile-sdk-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "287f6617-594b-48b3-a677-b7d1cd16eadb";
+				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
+				SWIFT_OBJC_BRIDGING_HEADER = "ucloud-ufile-sdk/ucloud-ufile-sdk_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 628CF2D7E481BDC5CB4C1FE4 /* Pods-ucloud-ufile-sdk_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = CFP9KY4MGC;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ucloud-ufile-sdk/ucloud-ufile-sdk-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/ucloud-ufile-sdk/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.ucloud.ucloud-ufile-sdk-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "287f6617-594b-48b3-a677-b7d1cd16eadb";
+				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
+				SWIFT_OBJC_BRIDGING_HEADER = "ucloud-ufile-sdk/ucloud-ufile-sdk_Example-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E92C928F2939846926263854 /* Pods-ucloud-ufile-sdk_Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ucloud-ufile-sdk_Example.app/ucloud-ufile-sdk_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07305B89EF6EDD48599FAAC8 /* Pods-ucloud-ufile-sdk_Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ucloud-ufile-sdk_Example.app/ucloud-ufile-sdk_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "ucloud-ufile-sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ucloud-ufile-sdk_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ucloud-ufile-sdk_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}

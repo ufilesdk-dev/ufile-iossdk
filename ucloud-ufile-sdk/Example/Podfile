@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ucloud-ufile-sdk_Example' do
+  pod 'ucloud-ufile-sdk', :path => '../'
+
+  target 'ucloud-ufile-sdk_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
