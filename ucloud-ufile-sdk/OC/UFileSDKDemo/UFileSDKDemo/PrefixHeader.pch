@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  UFileSDKDemo
+//
+//  Created by 涂雄 on 2017/11/3.
+//  Copyright © 2017年 涂雄. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UFileSDK.h"
+#import <Foundation/Foundation.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+static  NSString* bucket = @"lin-public";
+static  NSString* MD5   = @"";
+static  NSString* publicKey = @"";
+static  NSString* privateKey = @"";
+#endif /* PrefixHeader_pch */
