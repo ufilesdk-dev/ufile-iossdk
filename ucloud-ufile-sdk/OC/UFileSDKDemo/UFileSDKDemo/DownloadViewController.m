@@ -51,7 +51,7 @@
        option  = @{kUFileSDKOptionRange:range};
     }
     __weak typeof(self) weakself = self;
-    NSString* strAuth = [self.ufileSDK calcKey:@"GET" Key:strFileName MD5:nil ContentType:nil];
+    NSString* strAuth = [self.ufileSDK calcKey:@"GET" Key:strFileName MD5:nil ContentType:nil CallBackPolicy:nil];
     [self.ufileSDK.ufileApi getFile:strFileName authorization:strAuth option:option
     progress:^(NSProgress * progress) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -103,7 +103,7 @@
     {
          option = @{kUFileSDKOptionTimeoutInterval:[NSNumber numberWithFloat:5.0]};
     }
-    NSString* strAuth = [self.ufileSDK calcKey:@"GET" Key:strFileName MD5:nil ContentType:nil];
+    NSString* strAuth = [self.ufileSDK calcKey:@"GET" Key:strFileName MD5:nil ContentType:nil CallBackPolicy:nil];
     NSArray *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString* strDownloadPath = [NSString stringWithFormat:@"%@/%@",path.firstObject,strFileName];
     [self.ufileSDK.ufileApi getFile:strFileName toFile:strDownloadPath authorization:strAuth option:option progress:^(NSProgress * progress) {

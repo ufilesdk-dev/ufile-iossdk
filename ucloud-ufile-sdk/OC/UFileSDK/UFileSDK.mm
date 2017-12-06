@@ -8,6 +8,10 @@
 
 #import "UFileSDK.h"
 #import <CommonCrypto/CommonCrypto.h>
+@interface UFileSDK ()
+@property (nonatomic, copy) NSString* callBackPolicy;
+
+@end
 
 @implementation UFileSDK
 
@@ -18,11 +22,12 @@
         self.bucket = bucket;
         self.publicKey = publickey;
         self.privateKey = privatekey;
+        self.callBackPolicy = nil;
     }
     return self;
 }
 
--(NSString*)calcKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType
+-(NSString*)calcKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType  CallBackPolicy:(NSDictionary*)policy
 {
     NSMutableString* strBody = [NSMutableString  stringWithFormat:@"%@\n",httpMethod];
     if (contentMd5) {
@@ -40,6 +45,13 @@
     [strBody appendString:self.bucket];
     [strBody appendString:@"/"];
     [strBody appendString:key];
+    if (policy) {
+        NSError *error = nil;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:policy options:NSJSONWritingPrettyPrinted error:&error];
+        if (!error && jsonData) {
+            self.callBackPolicy = [self stringFromResult: (void*)jsonData.bytes Len:jsonData.length];
+        }
+    }
     return [self _sha1Sum: self.privateKey withString:strBody];
     
 }
@@ -51,7 +63,15 @@
     CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1),key.UTF8String , key.length, str.UTF8String, str.length, result);
     NSString* strDes = [self stringFromResult:result Len:CC_SHA1_DIGEST_LENGTH];
     free(result);
-    return [NSString stringWithFormat:@"UCloud %@:%@",self.publicKey,strDes];
+    if (self.callBackPolicy) {
+        
+        return [NSString stringWithFormat:@"UCloud %@:%@:%@",self.publicKey,strDes,self.callBackPolicy];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"UCloud %@:%@",self.publicKey,strDes];
+    }
+    
 }
 
 -(NSString*)stringFromResult:(void*)result Len:(NSInteger)length

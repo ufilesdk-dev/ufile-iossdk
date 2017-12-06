@@ -29,7 +29,7 @@
      __weak typeof(self) weakself = self;
     [_fileNameText  resignFirstResponder];
     NSString* strFileName = _fileNameText.text;
-    NSString* strAuth = [self.ufileSDK calcKey:@"DELETE" Key:strFileName MD5:nil ContentType:nil];
+    NSString* strAuth = [self.ufileSDK calcKey:@"DELETE" Key:strFileName MD5:nil ContentType:nil CallBackPolicy:nil];
     [self.ufileSDK.ufileApi deleteFile:strFileName authorization:strAuth success:^(NSDictionary * _Nonnull response) {
         if(response)
         {

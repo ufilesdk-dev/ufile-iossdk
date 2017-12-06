@@ -64,7 +64,7 @@
    
 //    NSString* strPath = [[[NSBundle mainBundle] bundlePath]stringByAppendingPathComponent:@"test.mp4"];
     NSString* strkey = @"test-hua.mp4";
-    NSString* strAuth = [self.ufileSDK calcKey:@"POST" Key:strkey MD5:nil ContentType:nil];
+    NSString* strAuth = [self.ufileSDK calcKey:@"POST" Key:strkey MD5:nil ContentType:nil CallBackPolicy:nil];
     [self.ufileSDK.ufileApi multipartUploadStart:strkey authorization:strAuth
                                          success:^(NSDictionary * _Nonnull response) {
                                              if (response) {
@@ -91,7 +91,11 @@
     self.btnCancleUpload.enabled = NO;
     self.btnFinishUpload.enabled = NO;
     self.btnSartUpload.enabled = YES;
-    NSString* strAuth = [self.ufileSDK calcKey:@"POST" Key:self.session.key MD5:nil ContentType:@"Video/mp4"];
+    NSDictionary* policyDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                               @"http://test.ucloud.cn",@"callbackUrl",
+                               @"url=http://demo.ufile.ucloud.cn/test.mp4&patten_name=mypolicy",
+                               @"callbackBody",nil];
+    NSString* strAuth = [self.ufileSDK calcKey:@"POST" Key:self.session.key MD5:nil ContentType:@"Video/mp4" CallBackPolicy:policyDic];
     [self.ufileSDK.ufileApi multipartUploadFinish:self.session.key uploadId:self.session.uploadID newKey:[NSString stringWithFormat:@"%@%@",self.session.key,@""] etags:self.session.etags contentType:@"Video/mp4" authorization:strAuth
     success:^(NSDictionary * _Nonnull response) {
         
@@ -109,7 +113,7 @@
     self.btnCancleUpload.enabled = NO;
     self.btnFinishUpload.enabled = NO;
     self.btnSartUpload.enabled = YES;
-    NSString* strAuth = [self.ufileSDK calcKey:@"DELETE" Key:self.session.key MD5:nil ContentType:nil];
+    NSString* strAuth = [self.ufileSDK calcKey:@"DELETE" Key:self.session.key MD5:nil ContentType:nil CallBackPolicy:nil];
     [self.ufileSDK.ufileApi multipartUploadAbort:self.session.key uploadId:self.session.uploadID  authorization:strAuth
                                           success:^(NSDictionary * _Nonnull response) {
                                               

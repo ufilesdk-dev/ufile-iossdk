@@ -17,7 +17,7 @@
 
 -(instancetype)initWith:(NSString*)publickey PrivateKey:(NSString*)privatekey Bucket:(NSString*)bucket;
 
--(NSString*)calcKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType;
+-(NSString*)calcKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType CallBackPolicy:(NSDictionary*)policy;
 -(NSString*)_sha1Sum:(NSString*)key withString:(NSString*)str;
 
 @end

@@ -32,7 +32,7 @@
     __weak typeof(self) weakself = self;
     [_ufileNameText resignFirstResponder];
     NSString* strFileName = _ufileNameText.text;
-    NSString* strAuth = [self.ufileSDK calcKey:@"HEAD" Key:strFileName MD5:nil ContentType:nil];
+    NSString* strAuth = [self.ufileSDK calcKey:@"HEAD" Key:strFileName MD5:nil ContentType:nil CallBackPolicy:nil];
     [self.ufileSDK.ufileApi headFile:strFileName authorization:strAuth
        success:^(NSDictionary *  response) {
         if(response)

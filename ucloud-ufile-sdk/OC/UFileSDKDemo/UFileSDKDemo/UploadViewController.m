@@ -29,9 +29,13 @@
     
     __weak typeof(self) weakself = self;
     NSString*  strkey = @"initscreen.jpg";
+    NSDictionary* policyDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                               @"http://test.ucloud.cn",@"callbackUrl",
+                               @"url=http://demo.ufile.ucloud.cn/test.mp4&patten_name=mypolicy",
+                               @"callbackBody",nil];
     NSString* strPath = [[NSBundle mainBundle] pathForResource:@"initscreen" ofType:@"jpg"];
     NSData*  contentData = [[NSData alloc] initWithContentsOfFile:strPath];
-    NSString* strAuth = [self.ufilesdk calcKey:@"PUT" Key:strkey MD5:nil ContentType:nil];
+    NSString* strAuth = [self.ufilesdk calcKey:@"PUT" Key:strkey MD5:nil ContentType:nil CallBackPolicy:policyDic];
 
     [self.ufilesdk.ufileApi putFile:strkey authorization:strAuth option:nil data:contentData progress:^(NSProgress* progress){
         
@@ -71,7 +75,7 @@
     NSString*  strkey = @"initscreen.jpg";
     NSString* strPath = [[NSBundle mainBundle] pathForResource:@"initscreen" ofType:@"jpg"];
     NSData*  contentData = [[NSData alloc] initWithContentsOfFile:strPath];
-    NSString* strAuth = [weakself.ufilesdk calcKey:@"POST" Key:strkey MD5:nil ContentType:nil];
+    NSString* strAuth = [weakself.ufilesdk calcKey:@"POST" Key:strkey MD5:nil ContentType:nil CallBackPolicy:nil];
     [self.ufilesdk.ufileApi uploadHit:strkey authorization:strAuth fileSize:contentData.length fileHash:@"AQAAAJQnkf8WXMgGCb2-WYPgLZGI7yz1"
     success:^(NSDictionary* response){
         
@@ -109,7 +113,7 @@
     __weak typeof(self) weakself = self;
     NSString*  strkey = @"123.jpg";
     NSString* strPath = [[NSBundle mainBundle] pathForResource:@"initscreen" ofType:@"jpg"];
-    NSString* strAuth = [self.ufilesdk calcKey:@"PUT" Key:strkey MD5:nil ContentType:@"text/plain"];
+    NSString* strAuth = [self.ufilesdk calcKey:@"PUT" Key:strkey MD5:nil ContentType:@"text/plain" CallBackPolicy:nil];
     NSDictionary* option = @{kUFileSDKOptionFileType:@"text/plain"};
     
    [self.ufilesdk.ufileApi putFile:strkey
