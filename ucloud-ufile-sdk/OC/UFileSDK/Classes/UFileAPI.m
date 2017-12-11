@@ -120,6 +120,7 @@ NSString* const kUFileRespKeyName = @"Key";
                         body:data
                     progress:uploadProgress
                      success:^(NSURLSessionDataTask * task, id responseObject) {
+                         
                          NSHTTPURLResponse* resp = (NSHTTPURLResponse*)task.response;
                          NSError * error = [[self class] _checkHttpRespError:resp body:responseObject];
                          if (error) {
@@ -507,8 +508,8 @@ NSString* const kUFileRespKeyName = @"Key";
         } else {
             userInfo = @{
                          kUFileRespHttpStatusCode: [NSNumber numberWithLong:response.statusCode],
-                         kUFileRespErrMsg: respObj[kUFileRespErrMsg],
-                         kUFileRespXSession: response.allHeaderFields[@"X-SessionId"]
+                         kUFileRespErrMsg: respObj[kUFileRespErrMsg]
+//                         ,kUFileRespXSession: response.allHeaderFields[@"X-SessionId"]
                          };
             retCode =  [respObj[kUFileRespRetCode] integerValue];
         }

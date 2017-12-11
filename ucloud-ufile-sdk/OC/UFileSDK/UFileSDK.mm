@@ -48,9 +48,11 @@
     if (policy) {
         NSError *error = nil;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:policy options:NSJSONWritingPrettyPrinted error:&error];
+        NSString* policy = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
         if (!error && jsonData) {
-            self.callBackPolicy = [self stringFromResult: (void*)jsonData.bytes Len:jsonData.length];
+            self.callBackPolicy = [self stringFromResult: (void*)policy.UTF8String Len:policy.length];
         }
+        strBody  =  [NSString stringWithFormat:@"%@%@",strBody,self.callBackPolicy];
     }
     return [self _sha1Sum: self.privateKey withString:strBody];
     
@@ -79,5 +81,6 @@
     NSData* data = [[NSData alloc] initWithBytes:result length:length];
     return [data base64EncodedStringWithOptions:0];
 }
+
 
 @end
