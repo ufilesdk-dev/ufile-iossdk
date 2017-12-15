@@ -7,44 +7,45 @@
 //
 
 #import "UFileSDK.h"
-#import <CommonCrypto/CommonCrypto.h>
+
 @interface UFileSDK ()
+@property (nonatomic, copy) NSString* encryptServer;
 @property (nonatomic, copy) NSString* callBackPolicy;
+
 
 @end
 
 @implementation UFileSDK
 
--(instancetype)initWith:(NSString *)publickey PrivateKey:(NSString *)privatekey Bucket:(NSString *)bucket
+-(instancetype)initWith:(NSString *)strSignServerUrl Bucket:(NSString *)bucket
 {
     if (self = [super init]) {
         self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:@"http://ufile.ucloud.cn"];
         self.bucket = bucket;
-        self.publicKey = publickey;
-        self.privateKey = privatekey;
         self.callBackPolicy = nil;
+        self.encryptServer = strSignServerUrl;
     }
     return self;
 }
 
 -(NSString*)calcKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType  CallBackPolicy:(NSDictionary*)policy
 {
-    NSMutableString* strBody = [NSMutableString  stringWithFormat:@"%@\n",httpMethod];
-    if (contentMd5) {
-        [strBody appendString:(contentMd5)];
+    NSMutableString* strHttpReq = [NSMutableString  stringWithFormat:@"%@?method=%@",self.encryptServer,httpMethod];
+    [strHttpReq appendFormat:@"&bucket=%@", self.bucket];
+    
+    if (key) {
+        [strHttpReq appendFormat:@"&key=%@", key];
     }
-    [strBody appendString:@"\n"];
+    
+    if (contentMd5) {
+        [strHttpReq appendFormat:@"&content_md5=%@", contentMd5];
+    }
     
     if (contentType) {
-        [strBody appendString:contentType];
+        [strHttpReq appendFormat:@"&content_type=%@", contentType];
     }
-    [strBody appendString:@"\n"];
-    [strBody appendString:@"\n"];
-    [strBody appendString:@""];
-    [strBody appendString:@"/"];
-    [strBody appendString:self.bucket];
-    [strBody appendString:@"/"];
-    [strBody appendString:key];
+  
+    
     if (policy) {
         NSError *error = nil;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:policy options:NSJSONWritingPrettyPrinted error:&error];
@@ -52,28 +53,39 @@
         if (!error && jsonData) {
             self.callBackPolicy = [self stringFromResult: (void*)policy.UTF8String Len:policy.length];
         }
-        strBody  =  [NSString stringWithFormat:@"%@%@",strBody,self.callBackPolicy];
+        if (self.callBackPolicy) {
+            [strHttpReq appendFormat:@"&put_policy=%@", self.callBackPolicy];
+        }
     }
-    return [self _sha1Sum: self.privateKey withString:strBody];
+    NSURL *url = [NSURL URLWithString:strHttpReq];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLSession *session = [NSURLSession sharedSession];
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0); //创建信号量
+    __block NSString* strRes = nil;
+    //4.task
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSHTTPURLResponse* httpResponse =  (NSHTTPURLResponse*)response;
+        if (httpResponse && httpResponse.statusCode == 200 && data) {
+            strRes = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            strRes = [strRes stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+        }
+        dispatch_semaphore_signal(semaphore);   //发送信号
+    }];
     
-}
-
--(NSString*)_sha1Sum:(NSString*)key withString:(NSString*)str
-{
-    void* result = malloc(CC_SHA1_DIGEST_LENGTH);
-    memset(result,0, CC_SHA1_DIGEST_LENGTH);
-    CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1),key.UTF8String , key.length, str.UTF8String, str.length, result);
-    NSString* strDes = [self stringFromResult:result Len:CC_SHA1_DIGEST_LENGTH];
-    free(result);
-    if (self.callBackPolicy) {
+    [task resume];
+    dispatch_semaphore_wait(semaphore,DISPATCH_TIME_FOREVER);  //等待
+    if (strRes) {
         
-        return [NSString stringWithFormat:@"UCloud %@:%@:%@",self.publicKey,strDes,self.callBackPolicy];
+        if (self.callBackPolicy) {
+            
+            return [NSString stringWithFormat:@"%@:%@",strRes,self.callBackPolicy];
+        }
+        else
+        {
+            return strRes;
+        }
     }
-    else
-    {
-        return [NSString stringWithFormat:@"UCloud %@:%@",self.publicKey,strDes];
-    }
-    
+    return nil;
 }
 
 -(NSString*)stringFromResult:(void*)result Len:(NSInteger)length

@@ -30,8 +30,8 @@
     __weak typeof(self) weakself = self;
     NSString*  strkey = @"initscreen.jpg";
     NSDictionary* policyDic = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"http://test.ucloud.cn",@"callbackUrl",
-                               @"url=http://demo.ufile.ucloud.cn/test.mp4&patten_name=mypolicy",
+                               @"http://inner.umedia.ucloud.com.cn/CreateUmediaTask",@"callbackUrl",
+                               @"url=http://demo.ufile.ucloud.cn/test.mp4&patten_name=ios_sdk_test",
                                @"callbackBody",nil];
     NSString* strPath = [[NSBundle mainBundle] pathForResource:@"initscreen" ofType:@"jpg"];
     NSData*  contentData = [[NSData alloc] initWithContentsOfFile:strPath];

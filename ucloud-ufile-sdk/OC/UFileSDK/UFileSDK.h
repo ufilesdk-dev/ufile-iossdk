@@ -11,21 +11,16 @@
 @interface UFileSDK : NSObject
 
 @property(nonatomic,strong) UFileAPI*     ufileApi;
-@property(nonatomic,strong) NSString*      bucket;
-@property(nonatomic,strong) NSString*      publicKey;
-@property(nonatomic,strong) NSString*      privateKey;
-
+@property(nonatomic,strong) NSString*     bucket;
 
 /**
  UFileSDK 初始化
 
- @param publickey 公钥
- @param privatekey 私钥
+ @param strSignServerUrl 签名服务器地址
  @param bucket 配置的bucket
  @return 返回UFileSDK实例
  */
--(instancetype)initWith:(NSString*)publickey PrivateKey:(NSString*)privatekey Bucket:(NSString*)bucket;
-
+-(instancetype)initWith:(NSString *)strSignServerUrl Bucket:(NSString *)bucket;
 
 
 
@@ -46,15 +41,6 @@
 -(NSString*)calcKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType CallBackPolicy:(NSDictionary*)policy;
 
 
-
-/**
- 签名加密
-
- @param key 私钥
- @param str 签名字符串
- @return 加密后的字符串
- */
--(NSString*)_sha1Sum:(NSString*)key withString:(NSString*)str;
 
 @end
 
