@@ -24,6 +24,7 @@
 		B2A599601FBAA0B000660E69 /* UFileSDK.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2A599571FBAA0B000660E69 /* UFileSDK.mm */; };
 		B2A599611FBAA0B000660E69 /* UFileHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A5995B1FBAA0B000660E69 /* UFileHttpManager.m */; };
 		B2A599621FBAA0B000660E69 /* UFileAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A5995C1FBAA0B000660E69 /* UFileAPI.m */; };
+		B2A5C8432027FEA600925104 /* UFileAPIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A5C8422027FEA600925104 /* UFileAPIUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		B2A5995D1FBAA0B000660E69 /* UFileAPIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFileAPIUtils.h; sourceTree = "<group>"; };
 		B2A5995E1FBAA0B000660E69 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		B2A5995F1FBAA0B000660E69 /* UFileHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFileHttpManager.h; sourceTree = "<group>"; };
+		B2A5C8422027FEA600925104 /* UFileAPIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFileAPIUtils.m; sourceTree = "<group>"; };
 		B2F37B321FA6FA7900E62F91 /* libUFileSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUFileSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 		B2A599591FBAA0B000660E69 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B2A5C8422027FEA600925104 /* UFileAPIUtils.m */,
 				B2A5995A1FBAA0B000660E69 /* UFileAPI.h */,
 				B2A5995B1FBAA0B000660E69 /* UFileHttpManager.m */,
 				B2A5995C1FBAA0B000660E69 /* UFileAPI.m */,
@@ -172,6 +175,7 @@
 			files = (
 				B2A599601FBAA0B000660E69 /* UFileSDK.mm in Sources */,
 				B2A599621FBAA0B000660E69 /* UFileAPI.m in Sources */,
+				B2A5C8432027FEA600925104 /* UFileAPIUtils.m in Sources */,
 				B2A599611FBAA0B000660E69 /* UFileHttpManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
