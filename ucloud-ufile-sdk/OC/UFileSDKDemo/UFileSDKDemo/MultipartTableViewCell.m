@@ -43,9 +43,9 @@
 - (IBAction)startUpload:(id)sender {
     
      __weak typeof(self) weakself = self;
-    NSString* contentType = @"Video/mp4";
+    NSString* contentType = @"image/jpeg";
     NSDictionary* option =  @{kUFileSDKOptionTimeoutInterval:[NSNumber numberWithFloat:5.0]};
-    NSString* strAuth = [self.session.ufileSDK calcKey:@"PUT" Key:self.session.key MD5:nil ContentType:contentType CallBackPolicy:nil];
+    NSString* strAuth = [self.session.ufileSDK calcKey:@"PUT" Key:self.session.key MD5:@"" ContentType:contentType CallBackPolicy:nil];
     [self.session.ufileSDK.ufileApi multipartUploadPart:self.session.key uploadId:self.session.uploadID partNumber:self.partNumber contentType:contentType data:[self.session getDataForPart:self.self.partNumber] option:option authorization:strAuth
  
     progress:^(NSProgress * progress) {

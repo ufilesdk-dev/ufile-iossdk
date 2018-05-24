@@ -35,9 +35,21 @@
                                @"callbackBody",nil];
     NSString* strPath = [[NSBundle mainBundle] pathForResource:@"initscreen" ofType:@"jpg"];
     NSData*  contentData = [[NSData alloc] initWithContentsOfFile:strPath];
-    NSString* strAuth = [self.ufilesdk calcKey:@"PUT" Key:strkey MD5:nil ContentType:nil CallBackPolicy:policyDic];
-
-    [self.ufilesdk.ufileApi putFile:strkey authorization:strAuth option:nil data:contentData progress:^(NSProgress* progress){
+    
+    NSString* contentType = @"image/jpeg";
+    
+    NSString* contentMD5 = [UFileAPIUtils calcMD5ForData:contentData];
+    
+    NSString* strAuth = [self.ufilesdk calcKey:@"PUT" Key:strkey MD5:contentMD5 ContentType:contentType CallBackPolicy:nil];
+    
+    //上传参与签名计算 要传authorization 生成的签名
+    //上传参与签名计算 要传data 文件内容
+    //上传参与签名计算 要传option 其他参数
+    //option[kUFileSDKOptionFileType]=contentType 文件类型
+    //option[kUFileSDKOptionMD5]=contentMD5 文件内容md5
+    NSDictionary * option = @{kUFileSDKOptionFileType: contentType, kUFileSDKOptionMD5: contentMD5};
+    
+    [self.ufilesdk.ufileApi putFile:strkey authorization:strAuth option:option data:contentData progress:^(NSProgress* progress){
         
     }
     success:^(NSDictionary* response){
@@ -75,8 +87,14 @@
     NSString*  strkey = @"initscreen.jpg";
     NSString* strPath = [[NSBundle mainBundle] pathForResource:@"initscreen" ofType:@"jpg"];
     NSData*  contentData = [[NSData alloc] initWithContentsOfFile:strPath];
-    NSString* strAuth = [weakself.ufilesdk calcKey:@"POST" Key:strkey MD5:nil ContentType:nil CallBackPolicy:nil];
-    [self.ufilesdk.ufileApi uploadHit:strkey authorization:strAuth fileSize:contentData.length fileHash:@"AQAAAJQnkf8WXMgGCb2-WYPgLZGI7yz1"
+    NSString* contentType = @"image/jpeg";
+//    NSString* contentMD5 = [UFileAPIUtils calcMD5ForData:contentData];
+    //不需要md5校验
+    NSString* strAuth = [weakself.ufilesdk calcKey:@"POST" Key:strkey MD5:@"" ContentType:contentType CallBackPolicy:nil];
+    // fileDetail.eTag
+    NSString* filehash = @"AQAAAJQnkf8WXMgGCb2-WYPgLZGI7yz1";
+    
+    [self.ufilesdk.ufileApi uploadHit:strkey authorization:strAuth fileSize:contentData.length fileHash:filehash fileType:contentType
     success:^(NSDictionary* response){
         
         if(response)
@@ -108,14 +126,20 @@
     
 }
 
+
+
 - (IBAction)putFileFromFile:(id)sender {
     
     __weak typeof(self) weakself = self;
+    
     NSString*  strkey = @"123.jpg";
     NSString* strPath = [[NSBundle mainBundle] pathForResource:@"initscreen" ofType:@"jpg"];
-    NSString* strAuth = [self.ufilesdk calcKey:@"PUT" Key:strkey MD5:nil ContentType:@"text/plain" CallBackPolicy:nil];
-    NSDictionary* option = @{kUFileSDKOptionFileType:@"text/plain"};
-    
+    NSData*  contentData = [[NSData alloc] initWithContentsOfFile:strPath];
+    NSString* contentType = @"image/jpeg";
+    NSString* contentMD5 = [UFileAPIUtils calcMD5ForData:contentData];
+    NSDictionary* option = @{kUFileSDKOptionFileType: contentType, kUFileSDKOptionMD5: contentMD5};
+    NSString* strAuth = [self.ufilesdk calcKey:@"PUT" Key:strkey MD5:contentMD5 ContentType:contentType CallBackPolicy:nil];
+   
    [self.ufilesdk.ufileApi putFile:strkey
                            fromFile:strPath
                            authorization:strAuth

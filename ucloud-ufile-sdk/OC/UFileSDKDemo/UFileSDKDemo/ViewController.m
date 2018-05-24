@@ -11,7 +11,6 @@
 #import "DeleteViewController.h"
 #import "DownloadViewController.h"
 #import "MultipartUploadViewController.h"
-static NSString* encryptServer = @"http://192.168.1.113//web/token_server.php";
 
 @interface ViewController ()
 
@@ -27,8 +26,10 @@ static NSString* encryptServer = @"http://192.168.1.113//web/token_server.php";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.publicKey.text = publicToken;
+    self.privateKey.text = privateToken;
     self.bucketKey.text = bucket;
+    
 }
 
 
@@ -40,7 +41,10 @@ static NSString* encryptServer = @"http://192.168.1.113//web/token_server.php";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if (_ufilesdk == nil) {
-         self.ufilesdk = [[UFileSDK alloc] initWith:encryptServer Bucket:bucket];
+        //内置签名算法计算签名
+        self.ufilesdk = [[UFileSDK alloc] initWith:bucket PublicKey:publicToken PrivateKey:privateToken];
+        //签名服务器计算签名
+//        self.ufilesdk = [[UFileSDK alloc] initWith:bucket EncryptServer:encryptServer];
     }
    
     if ([segue.destinationViewController isKindOfClass:[QueryViewController class]]) {

@@ -7,9 +7,9 @@
 //
 
 #import "UFileSDK.h"
+#import "UFileAPIUtils.h"
 
 @interface UFileSDK ()
-@property (nonatomic, copy) NSString* encryptServer;
 @property (nonatomic, copy) NSString* callBackPolicy;
 
 
@@ -17,18 +17,40 @@
 
 @implementation UFileSDK
 
--(instancetype)initWith:(NSString *)strSignServerUrl Bucket:(NSString *)bucket
+-(instancetype)initWith:(NSString *)bucket EncryptServer:(NSString *)encryptServer
 {
     if (self = [super init]) {
         self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:@"http://ufile.ucloud.cn"];
         self.bucket = bucket;
         self.callBackPolicy = nil;
-        self.encryptServer = strSignServerUrl;
+        self.encryptServer = encryptServer;
+    }
+    return self;
+}
+
+-(instancetype)initWith:(NSString *)bucket PublicKey:(NSString *)publicKey PrivateKey:(NSString *)privateKey
+{
+    if (self = [super init]) {
+        self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:@"http://ufile.ucloud.cn"];
+        self.publicToken = publicKey;
+        self.privateToken = privateKey;
+        self.bucket = bucket;
+        self.callBackPolicy = nil;
     }
     return self;
 }
 
 -(NSString*)calcKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType  CallBackPolicy:(NSDictionary*)policy
+{
+    if (self.encryptServer) {
+        return [self calcAuthServerKey:httpMethod Key:key MD5:contentMd5 ContentType:contentType CallBackPolicy:policy];
+    } else {
+        return [self calcTokenKey:httpMethod Key:key MD5:contentMd5 ContentType:contentType CallBackPolicy:policy];
+    }
+}
+
+
+-(NSString*)calcAuthServerKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType  CallBackPolicy:(NSDictionary*)policy
 {
     NSMutableString* strHttpReq = [NSMutableString  stringWithFormat:@"%@?method=%@",self.encryptServer,httpMethod];
     [strHttpReq appendFormat:@"&bucket=%@", self.bucket];
@@ -44,7 +66,7 @@
     if (contentType) {
         [strHttpReq appendFormat:@"&content_type=%@", contentType];
     }
-  
+    
     
     if (policy) {
         NSError *error = nil;
@@ -86,6 +108,24 @@
         }
     }
     return nil;
+}
+
+
+-(NSString*)calcTokenKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType  CallBackPolicy:(NSDictionary*)policy
+{
+    NSString* decodeKey = [key stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+    NSMutableString* signString = [NSMutableString stringWithFormat:@"%@\n", httpMethod];
+    [signString appendFormat:@"%@\n", contentMd5];
+    [signString appendFormat:@"%@\n", contentType];
+    [signString appendFormat:@"%@\n", @""];
+    [signString appendFormat:@"/%@/%@", self.bucket, decodeKey];
+    
+    NSString* HmacSHA1str = [UFileAPIUtils HmacSha1:self.privateToken data:signString];
+    
+    NSMutableString* signedStr = [NSMutableString stringWithFormat:@"UCloud %@:%@", self.publicToken, HmacSHA1str];
+    
+    return signedStr;
 }
 
 -(NSString*)stringFromResult:(void*)result Len:(NSInteger)length

@@ -54,7 +54,8 @@
     self.btnSartUpload.enabled = NO;
     self.btnFinishUpload.enabled = YES;
     self.btnCancleUpload.enabled = YES;
-    NSString* strPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp4"];
+//    NSString* strPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp4"];
+    NSString* strPath = [[NSBundle mainBundle] pathForResource:@"initscreen" ofType:@"jpg"];
     if (nil == strPath) {
         UIAlertController* alterView =  [UIAlertController alertControllerWithTitle:@"Warning!" message:@"路径不存在" preferredStyle:(UIAlertControllerStyleAlert)];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
@@ -63,9 +64,10 @@
     }
    
 //    NSString* strPath = [[[NSBundle mainBundle] bundlePath]stringByAppendingPathComponent:@"test.mp4"];
-    NSString* strkey = @"test-hua.mp4";
-    NSString* strAuth = [self.ufileSDK calcKey:@"POST" Key:strkey MD5:nil ContentType:nil CallBackPolicy:nil];
-    [self.ufileSDK.ufileApi multipartUploadStart:strkey authorization:strAuth
+    NSString* strkey = @"initscreen.jpg";
+    NSString* contentType = @"image/jpeg";
+    NSString* strAuth = [self.ufileSDK calcKey:@"POST" Key:strkey MD5:@"" ContentType:contentType CallBackPolicy:nil];
+    [self.ufileSDK.ufileApi multipartUploadStart:strkey authorization:strAuth fileType:contentType
                                          success:^(NSDictionary * _Nonnull response) {
                                              if (response) {
                                                  NSString* msg = [NSString stringWithFormat:@"Multipart start:\n uploadId=%@\n blocksize=%lu \n bucketName=%@ \n Key=%@\n",response[kUFileRespUploadId],[response[kUFileRespBlockSize] integerValue],response[kUFileRespBucketName],response[kUFileRespKeyName]];
@@ -95,8 +97,9 @@
                                @"http://test.ucloud.cn",@"callbackUrl",
                                @"url=http://demo.ufile.ucloud.cn/test.mp4&patten_name=mypolicy",
                                @"callbackBody",nil];
-    NSString* strAuth = [self.ufileSDK calcKey:@"POST" Key:self.session.key MD5:nil ContentType:@"Video/mp4" CallBackPolicy:policyDic];
-    [self.ufileSDK.ufileApi multipartUploadFinish:self.session.key uploadId:self.session.uploadID newKey:[NSString stringWithFormat:@"%@%@",self.session.key,@""] etags:self.session.etags contentType:@"Video/mp4" authorization:strAuth
+    NSString* contentType = @"image/jpeg";
+    NSString* strAuth = [self.ufileSDK calcKey:@"POST" Key:self.session.key MD5:@"" ContentType:contentType CallBackPolicy:policyDic];
+    [self.ufileSDK.ufileApi multipartUploadFinish:self.session.key uploadId:self.session.uploadID newKey:[NSString stringWithFormat:@"%@%@",self.session.key,@""] etags:self.session.etags contentType:contentType authorization:strAuth
     success:^(NSDictionary * _Nonnull response) {
         
         NSString* msg = [NSString stringWithFormat:@"File Upload Finshed:\n  blocksize=%lu \n bucketName=%@ \n Key=%@\n",response[kUFileRespBlockSize],response[kUFileRespBucketName],response[kUFileRespKeyName]];
@@ -113,9 +116,10 @@
     self.btnCancleUpload.enabled = NO;
     self.btnFinishUpload.enabled = NO;
     self.btnSartUpload.enabled = YES;
-    NSString* strAuth = [self.ufileSDK calcKey:@"DELETE" Key:self.session.key MD5:nil ContentType:nil CallBackPolicy:nil];
-    [self.ufileSDK.ufileApi multipartUploadAbort:self.session.key uploadId:self.session.uploadID  authorization:strAuth
-                                          success:^(NSDictionary * _Nonnull response) {
+    NSString* contentType = @"image/jpeg";
+    NSString* strAuth = [self.ufileSDK calcKey:@"DELETE" Key:self.session.key MD5:@"" ContentType:contentType CallBackPolicy:nil];
+    
+    [self.ufileSDK.ufileApi multipartUploadAbort:self.session.key uploadId:self.session.uploadID  authorization:strAuth contentType:contentType success:^(NSDictionary * _Nonnull response) {
                                               
                                               NSString* msg = @"File Upload aborted!";
                                               [weakself showMsg: msg];

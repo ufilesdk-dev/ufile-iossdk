@@ -82,6 +82,7 @@ NSString* const kUFileRespKeyName = @"Key";
 - (NSURL*)fileUrl:(NSString*)fileName params:(NSDictionary*)params
 {
     NSMutableString* url = [NSMutableString stringWithString:UFilePercentEscapedStringFromString(fileName)];
+
     if (params != nil) {
         [url appendString:@"?"];
         BOOL first = YES;
@@ -175,11 +176,12 @@ NSString* const kUFileRespKeyName = @"Key";
                                  authorization:(NSString *)authorization
                                       fileSize:(NSInteger)fileSize
                                       fileHash:(NSString *)fileHash
+                                      fileType:(NSString *)fileType
                                        success:(UFileUploadDoneCallback)success
                                        failure:(UFileOpFailCallback)failure
 {
     return [self.fileMgr Post:[self fileUrl:@"uploadhit" params:@{@"Hash":fileHash, @"FileName":fileName, @"FileSize":[@(fileSize) stringValue]}]
-                 headerParams: @[@[@"Authorization", authorization]]
+                 headerParams: @[@[@"Authorization", authorization],@[@"Content-Type", fileType]]
               timeoutInterval:nil
                          body:nil
                      progress: nil
@@ -255,11 +257,12 @@ NSString* const kUFileRespKeyName = @"Key";
 
 - (NSURLSessionDataTask * _Nullable) multipartUploadStart:(NSString* _Nonnull)fileName
                                             authorization:(NSString* _Nonnull)authorization
+                                                 fileType:(NSString* _Nonnull)fileType
                                                   success:(UFileOpDoneCallback _Nonnull)success
                                                   failure:(UFileOpFailCallback _Nonnull)failure
 {
     return [self.fileMgr Post:[self fileUrl:fileName params:@{@"uploads": @""}]
-                 headerParams: @[@[@"Authorization", authorization]]
+                 headerParams: @[@[@"Authorization", authorization],@[@"Content-Type", fileType]]
               timeoutInterval:nil
                          body:nil
                      progress: nil
@@ -450,11 +453,12 @@ NSString* const kUFileRespKeyName = @"Key";
 -(NSURLSessionDataTask * _Nullable)multipartUploadAbort:(NSString *)fileName
                                                uploadId:(NSString *)uploadId
                                           authorization:(NSString* _Nonnull)authorization
+                                            contentType:(NSString* _Nonnull)contentType
                                                 success:(UFileUploadDoneCallback)success
                                                 failure:(UFileOpFailCallback)failure
 {
     return [self.fileMgr Delete:[self fileUrl:fileName params:@{@"uploadId":uploadId}]
-                   headerParams:@[@[@"Authorization", authorization]]
+                   headerParams:@[@[@"Authorization", authorization],@[@"Content-Type", contentType]]
                 timeoutInterval:nil
                         success:^(NSURLSessionDataTask * task, id responseObject) {
                             NSHTTPURLResponse* resp = (NSHTTPURLResponse*)task.response;

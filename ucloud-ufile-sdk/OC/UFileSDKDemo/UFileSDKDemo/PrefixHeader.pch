@@ -13,7 +13,10 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
-static  NSString* bucket = @"kevin-umedia";
+static  NSString* encryptServer = @"";
+static  NSString* publicToken = @"";
+static  NSString* privateToken = @"";
+static  NSString* bucket = @"";
+static  NSString* prefix = @"";
 static  NSString* MD5   = @"";
 #endif /* PrefixHeader_pch */

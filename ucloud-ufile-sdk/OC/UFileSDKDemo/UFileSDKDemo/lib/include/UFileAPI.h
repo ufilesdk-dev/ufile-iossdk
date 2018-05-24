@@ -149,6 +149,7 @@ typedef void (^ UFileOpFailCallback)(NSError * _Nonnull error);
                                   authorization:(NSString* _Nonnull)authorization
                                        fileSize:(NSInteger)fileSize
                                        fileHash:(NSString* _Nonnull)fileHash
+                                       fileType:(NSString* _Nonnull)fileType
                                         success:(UFileUploadDoneCallback _Nonnull)success
                                         failure:(UFileOpFailCallback _Nonnull)failure;
 
@@ -243,6 +244,7 @@ typedef void (^ UFileOpFailCallback)(NSError * _Nonnull error);
  */
 - (NSURLSessionDataTask * _Nullable ) multipartUploadStart:(NSString* _Nonnull)key
                                              authorization:(NSString* _Nonnull)authorization
+                                                  fileType:(NSString* _Nonnull)fileType
                                                    success:(UFileOpDoneCallback _Nonnull)success
                                                    failure:(UFileOpFailCallback _Nonnull)failure;
 
@@ -324,6 +326,7 @@ typedef void (^ UFileOpFailCallback)(NSError * _Nonnull error);
 - (NSURLSessionDataTask * _Nullable ) multipartUploadAbort:(NSString* _Nonnull)key
                                                   uploadId:(NSString* _Nonnull)uploadId
                                              authorization:(NSString* _Nonnull)authorization
+                                               contentType:(NSString* _Nonnull)contentType
                                                    success:(UFileUploadDoneCallback _Nonnull)success
                                                    failure:(UFileOpFailCallback _Nonnull)failure;
 

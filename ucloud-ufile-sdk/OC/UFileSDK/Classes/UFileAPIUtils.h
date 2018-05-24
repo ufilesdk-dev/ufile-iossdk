@@ -17,6 +17,8 @@
 
 + (nullable NSString*) calcMD5ForPath:(nonnull NSString* )path;
 
++ (nonnull NSString*) HmacSha1:(nonnull NSString* )key data:(nonnull NSString *)data;
+
 @end
 
 #endif /* UFileAPIUtils_h */

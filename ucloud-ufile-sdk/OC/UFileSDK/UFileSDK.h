@@ -8,20 +8,33 @@
 
 #import <Foundation/Foundation.h>
 #import "UFileAPI.h"
+
 @interface UFileSDK : NSObject
 
 @property(nonatomic,strong) UFileAPI*     ufileApi;
+@property(nonatomic,strong) NSString*     encryptServer;
 @property(nonatomic,strong) NSString*     bucket;
+@property(nonatomic,strong) NSString*     publicToken;
+@property(nonatomic,strong) NSString*     privateToken;
 
 /**
  UFileSDK 初始化
 
- @param strSignServerUrl 签名服务器地址 （必须）
+ @param encryptServer 签名服务器地址 （必须）
  @param bucket 配置的bucket （必须）
  @return 返回UFileSDK实例
  */
--(instancetype)initWith:(NSString *)strSignServerUrl Bucket:(NSString *)bucket;
+-(instancetype)initWith:(NSString *)bucket EncryptServer:(NSString *)encryptServer;
 
+/**
+ UFileSDK 初始化
+ 
+ @param publicKey 公钥（必须）
+ @param privateKey 私钥（必须）
+ @param bucket 配置的bucket （必须）
+ @return 返回UFileSDK实例
+ */
+-(instancetype)initWith:(NSString *)bucket PublicKey:(NSString *)publicKey PrivateKey:(NSString *)privateKey;
 
 
 /**
@@ -41,6 +54,15 @@
  */
 -(NSString*)calcKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType CallBackPolicy:(NSDictionary*)policy;
 
+/**
+ 签名服务器计算签名
+ */
+-(NSString*)calcAuthServerKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType CallBackPolicy:(NSDictionary*)policy;
+
+/**
+ 内置签名算法计算签名
+ */
+-(NSString*)calcTokenKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType CallBackPolicy:(NSDictionary*)policy;
 
 
 @end

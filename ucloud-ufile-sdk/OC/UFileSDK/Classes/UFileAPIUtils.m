@@ -9,7 +9,7 @@
 #import "UFileAPIUtils.h"
 
 #import <CommonCrypto/CommonDigest.h>
-
+#import <CommonCrypto/CommonHMAC.h>
 
 static const NSUInteger kFileBlockSize = 8 * 1024;
 
@@ -53,6 +53,22 @@ static const NSUInteger kFileBlockSize = 8 * 1024;
         [res appendFormat:@"%02x",buf[i]];
     }
     return res;
+}
+
+
++ (NSString *) HmacSha1:(NSString *) key data:(NSString *) data
+{
+    const void *cKey  = [key cStringUsingEncoding:NSASCIIStringEncoding];
+//    const void *cData = [data cStringUsingEncoding:NSASCIIStringEncoding];
+    const void *cData = [data cStringUsingEncoding:NSUTF8StringEncoding];
+    //sha1
+    unsigned char cHMAC[CC_SHA1_DIGEST_LENGTH];
+    CCHmac(kCCHmacAlgSHA1, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+    
+    NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC length:sizeof(cHMAC)];
+    
+    NSString *hash = [HMAC base64EncodedStringWithOptions:0];//将加密结果进行一次BASE64编码。
+    return hash;
 }
 
 @end
