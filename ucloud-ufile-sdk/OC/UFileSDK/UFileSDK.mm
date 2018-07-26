@@ -17,7 +17,7 @@
 
 @implementation UFileSDK
 
--(instancetype)initWith:(NSString *)bucket EncryptServer:(NSString *)encryptServer
+-(instancetype)initWith:(NSString *)bucket ProxySuffix:(NSString *)proxySuffix EncryptServer:(NSString *)encryptServer
 {
     if (self = [super init]) {
         self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:@"http://ufile.ucloud.cn"];
@@ -28,10 +28,11 @@
     return self;
 }
 
--(instancetype)initWith:(NSString *)bucket PublicKey:(NSString *)publicKey PrivateKey:(NSString *)privateKey
+-(instancetype)initWith:(NSString *)bucket ProxySuffix:(NSString *)proxySuffix PublicKey:(NSString *)publicKey PrivateKey:(NSString *)privateKey
 {
     if (self = [super init]) {
-        self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:@"http://ufile.ucloud.cn"];
+//        self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:@"http://ufile.ucloud.cn"];
+        self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:[NSString stringWithFormat:@"http://%@", proxySuffix]];
         self.publicToken = publicKey;
         self.privateToken = privateKey;
         self.bucket = bucket;

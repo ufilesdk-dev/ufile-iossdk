@@ -42,9 +42,9 @@
     
     if (_ufilesdk == nil) {
         //内置签名算法计算签名
-        self.ufilesdk = [[UFileSDK alloc] initWith:bucket PublicKey:publicToken PrivateKey:privateToken];
+        self.ufilesdk = [[UFileSDK alloc] initWith:bucket ProxySuffix:proxySuffix PublicKey:publicToken PrivateKey:privateToken];
         //签名服务器计算签名
-//        self.ufilesdk = [[UFileSDK alloc] initWith:bucket EncryptServer:encryptServer];
+//        self.ufilesdk = [[UFileSDK alloc] initWith:bucket ProxySuffix:proxySuffix EncryptServer:encryptServer];
     }
    
     if ([segue.destinationViewController isKindOfClass:[QueryViewController class]]) {
