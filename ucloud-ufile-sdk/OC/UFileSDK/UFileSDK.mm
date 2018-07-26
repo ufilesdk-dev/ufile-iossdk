@@ -20,7 +20,8 @@
 -(instancetype)initWith:(NSString *)bucket ProxySuffix:(NSString *)proxySuffix EncryptServer:(NSString *)encryptServer
 {
     if (self = [super init]) {
-        self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:@"http://ufile.ucloud.cn"];
+//        self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:@"http://ufile.ucloud.cn"];
+        self.ufileApi = [[UFileAPI alloc] initWithBucket:bucket url:[NSString stringWithFormat:@"http://%@", proxySuffix]];
         self.bucket = bucket;
         self.callBackPolicy = nil;
         self.encryptServer = encryptServer;
