@@ -24,7 +24,7 @@
  @param bucket 配置的bucket （必须）
  @return 返回UFileSDK实例
  */
--(instancetype)initWith:(NSString *)bucket EncryptServer:(NSString *)encryptServer;
+-(instancetype)initWith:(NSString *)bucket ProxySuffix:(NSString *)proxySuffix EncryptServer:(NSString *)encryptServer;
 
 /**
  UFileSDK 初始化
@@ -34,7 +34,7 @@
  @param bucket 配置的bucket （必须）
  @return 返回UFileSDK实例
  */
--(instancetype)initWith:(NSString *)bucket PublicKey:(NSString *)publicKey PrivateKey:(NSString *)privateKey;
+-(instancetype)initWith:(NSString *)bucket ProxySuffix:(NSString *)proxySuffix PublicKey:(NSString *)publicKey PrivateKey:(NSString *)privateKey;
 
 
 /**

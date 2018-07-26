@@ -13,10 +13,11 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-static  NSString* encryptServer = @"";
+static  NSString* encryptServer = @"";//签名服务器地址 如 192.168.160.3:8080/token_server.php
 static  NSString* publicToken = @"";
 static  NSString* privateToken = @"";
-static  NSString* bucket = @"";
+static  NSString* bucket = @"";//buckName 如 xxx.cn-bj.ufileos.com的buckName为xxx
+static  NSString* proxySuffix = @"hk.ufileos.com";//使用默认域名后缀 ufile.ucloud.cn
 static  NSString* prefix = @"";
 static  NSString* MD5   = @"";
 #endif /* PrefixHeader_pch */
