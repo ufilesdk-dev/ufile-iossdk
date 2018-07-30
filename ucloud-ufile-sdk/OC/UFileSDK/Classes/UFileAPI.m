@@ -419,11 +419,16 @@ NSString* const kUFileRespKeyName = @"Key";
                                                         userInfo:@{@"ErrMsg": @"Invalid response "}]);
                               return;
                           }
-                          success(@{
-                                    kUFileRespLength: respObj[@"FileSize"],
-                                    kUFileRespBucketName: respObj[kUFileRespBucketName],
-                                    kUFileRespKeyName: respObj[kUFileRespKeyName]
-                                    });
+                          
+                          if (respObj[kUFileRespBucketName] == NULL && respObj[kUFileRespKeyName] == NULL) {
+                              success(NULL);
+                          }else{
+                              success(@{
+                                        kUFileRespLength: respObj[@"FileSize"],
+                                        kUFileRespBucketName: respObj[kUFileRespBucketName],
+                                        kUFileRespKeyName: respObj[kUFileRespKeyName]
+                                        });
+                          }
                       }
                       failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                           theFailCb(error);
