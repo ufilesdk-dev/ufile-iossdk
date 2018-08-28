@@ -28,7 +28,7 @@ UCloud TOKEN_Your_Public_Key:someSecretsIDontWantShow
 其中 `UCloud `（带空格） 是固定的，`:` 前面的一段是您的公钥，`:` 后面的是经过算法生成好的签名字符串。  
 
 **使用 SDK 您不必关心签名是如何生成的，只需要关心哪些字段会参与签名计算即可。**
-在本 SDK 中，(UFileSDK)[https://github.com/ufilesdk-dev/ufile-iossdk/blob/master/ucloud-ufile-sdk/OC/UFileSDK/UFileSDK.h] 里面有三个函数用来计算签名的，分别是 calcKey, calcAuthServerKey。以下我们分别对这两个签名函数入参数做详细的说明。
+在本 SDK 中，[UFileSDK](https://github.com/ufilesdk-dev/ufile-iossdk/blob/master/ucloud-ufile-sdk/OC/UFileSDK/UFileSDK.h) 里面有三个函数用来计算签名的，分别是 calcKey, calcAuthServerKey。以下我们分别对这两个签名函数入参数做详细的说明。
 
 ### calcKey
 这是一个直接生成签名的函数，他需要传入的参数和说明如下：
