@@ -53,3 +53,9 @@ UCloud TOKEN_Your_Public_Key:someSecretsIDontWantShow
 
 **注意：计算签名 key 这个字段必须和接口需要的 key 字段一致，否则会报 403 签名不正确的错误。**  
 比如 putFile 需要传入 key，fileName, authorization 这三个字段。那么 key 必须和签名使用的 key 一致。
+
+## BitCode 设置
+
+我们需要把 Enable BitCode设置为 ‘NO’ 。 具体路径为：`project->targest->Build Setting->Enable Bitcode`. 
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fuqh7b5pjrj30v509mwgb.jpg)
