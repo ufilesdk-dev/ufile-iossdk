@@ -116,17 +116,28 @@
 -(NSString*)calcTokenKey:(NSString*)httpMethod  Key:(NSString*)key  MD5:(NSString*)contentMd5 ContentType:(NSString*)contentType  CallBackPolicy:(NSDictionary*)policy
 {
     NSString* decodeKey = [key stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
     NSMutableString* signString = [NSMutableString stringWithFormat:@"%@\n", httpMethod];
+    
     [signString appendFormat:@"%@\n", contentMd5];
     [signString appendFormat:@"%@\n", contentType];
     [signString appendFormat:@"%@\n", @""];
     [signString appendFormat:@"/%@/%@", self.bucket, decodeKey];
     
+    NSMutableString *strBase64 = [NSMutableString string];
+    if (policy) {
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:policy options:NSJSONWritingPrettyPrinted error:nil];
+        NSString *polocy_str = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSData *data = [polocy_str dataUsingEncoding:NSUTF8StringEncoding];
+        strBase64 = [NSMutableString stringWithString:[data base64Encoding]];
+        [signString appendFormat:@"%@", strBase64];
+    }
+    
     NSString* HmacSHA1str = [UFileAPIUtils HmacSha1:self.privateToken data:signString];
-    
     NSMutableString* signedStr = [NSMutableString stringWithFormat:@"UCloud %@:%@", self.publicToken, HmacSHA1str];
-    
+    if (strBase64) {
+        signedStr = [NSMutableString stringWithFormat:@"UCloud %@:%@:%@", self.publicToken, HmacSHA1str,strBase64];
+    }
+
     return signedStr;
 }
 
