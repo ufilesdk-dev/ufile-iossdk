@@ -3,6 +3,8 @@
 
 ## 我们发布了最新版本的UFileSDK请前往 [ucloud/ufile-sdk-ios](https://github.com/ucloud/ufile-sdk-ios)查看
 
+当前仓库不再维护，未来会废弃，推荐使用新版`UFileSDK`。
+
 
 
 # 目录说明 
